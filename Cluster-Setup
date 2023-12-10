@@ -1,4 +1,5 @@
-Install Packages
+
+  Install Packages
 1. Log in to the control plane node.
 
 2. Create the configuration file for containerd:
@@ -39,6 +40,11 @@ sudo systemctl status containerd
 10. Disable swap:
 
 sudo swapoff -a
+    en cas de probleme de permision dans les cmde kubectl 
+      sudo -i
+      swapoff -a
+      exit
+      strace -eopenat kubectl version
 11. Install the dependency packages:
 
 sudo apt-get update && sudo apt-get install -y apt-transport-https curl
